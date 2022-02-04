@@ -1,17 +1,6 @@
 trigger:
 - none
 
-- master
-- releases/*
-- node6hotfixes/*
-
-resources:
-  repositories:
-  - repository: AzureDevOps
-    type: git
-    endpoint: AzureDevOps
-    name: AzureDevOps/AzureDevOps
-
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:

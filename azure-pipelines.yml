@@ -1,4 +1,13 @@
 trigger:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'ac-general'
+    subscriptionId: 'ff3e80e8-6388-4e86-8210-4cddd9e74664'
+    action: 'Create Or Update Resource Group'
+    location: 'Canada Central'
+    templateLocation: 'Linked artifact'
+    deploymentMode: 'Incremental'
 - master
 - releases/*
 - node6hotfixes/*
